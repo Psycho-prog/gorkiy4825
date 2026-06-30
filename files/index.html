@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кафе Горький</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== ШАПКА / НАВИГАЦИЯ ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">Кафе Горький 48/25</a>
+
+      <ul class="nav__list" id="navList">
+        <li><a href="#about"    class="nav__link">О нас</a></li>
+        <li><a href="#menu"     class="nav__link">Меню</a></li>
+        <li><a href="#gallery"  class="nav__link">Галерея</a></li>
+        <li><a href="#reviews"  class="nav__link">Отзывы</a></li>
+        <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        <li><a href="#contacts" class="nav__btn">Забронировать</a></li>
+      </ul>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img
+          src="/img/photo_1_2026-06-29_23-55-51.jpg"
+          alt="Интерьер кофейни Зерно"
+          class="hero__bg-img"
+        />
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow">Авторская кофейня · Нижний Новгород</p>
+        <h1 class="hero__title">Кафе Горький 48/25</h1>
+        <p class="hero__sub">Каждая чашка — отдельная история.<br>Мы рассказываем их с&nbsp;2024&nbsp;года.</p>
+        <a href="#contacts" class="btn btn--light">Забронировать столик</a>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">листайте</span>
+      </div>
+    </section>
+
+    <!-- ===== О НАС ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__layout">
+
+          <div class="about__visual reveal">
+            <img
+              src="/img/photo_2_2026-06-29_23-55-51.jpg"
+              alt="Бариста готовит кофе"
+              class="about__img"
+            />
+            <div class="about__badge">
+              <span class="about__badge-num">3+</span>
+              <span class="about__badge-label">лет в&nbsp;профессии</span>
+            </div>
+          </div>
+
+          <div class="about__text reveal">
+            <span class="section-tag">О кофейне</span>
+            <h2 class="section-title">Место, где<br><em>напитки становится искусством</em></h2>
+            <p>«Кафе Горького» — кофейня, где мы сами обжариваем зёрна с&nbsp;трёх континентов, варим каждую чашку вручную и&nbsp;готовим завтраки из&nbsp;фермерских продуктов. Никаких компромиссов — только то, чем&nbsp;гордимся.</p>
+            <p>Наши бариста проходят обучение у&nbsp;чемпионов Европы, а&nbsp;кухня работает по&nbsp;авторским рецептам шефа Ирины Соловьёвой.</p>
+
+            <ul class="features">
+              <li class="feature">
+                <span class="feature__icon">🌿</span>
+                <div>
+                  <strong>Своя обжарка</strong>
+                  <p>Свежие партии каждый понедельник</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__icon">🍳</span>
+                <div>
+                  <strong>Авторская кухня</strong>
+                  <p>Завтраки и обеды без полуфабрикатов</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__icon">🏅</span>
+                <div>
+                  <strong>Лучшая кофейня 2026</strong>
+                  <p>По версии Яндекс Картам</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__icon">♻️</span>
+                <div>
+                  <strong>Ноль пластика</strong>
+                  <p>Биоразлагаемая упаковка и компостирование</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== МЕНЮ ===== -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Что пить и есть</span>
+          <h2 class="section-title">Наше меню</h2>
+        </div>
+
+        <div class="menu__tabs reveal" role="tablist">
+          <button class="tab tab--active" data-tab="coffee" role="tab" aria-selected="true">Кофе</button>
+          <button class="tab" data-tab="food"    role="tab" aria-selected="false">Еда</button>
+          <button class="tab" data-tab="desserts" role="tab" aria-selected="false">Десерты</button>
+          <button class="tab" data-tab="grill" role="tab" aria-selected="false">Гриль</button>
+        </div>
+
+        <div class="menu__grid" id="menuGrid">
+
+          <!-- КОФЕ -->
+          <article class="card" data-cat="coffee">
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=480&q=80&auto=format&fit=crop" alt="Эспрессо" loading="lazy" />
+              <span class="card__tag">Классика</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Эспрессо</h3>
+              <p class="card__desc">Двойной шот из смеси эфиопской и&nbsp;бразильской арабики</p>
+              <span class="card__price">180 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="coffee">
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=480&q=80&auto=format&fit=crop" alt="Капучино" loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Капучино</h3>
+              <p class="card__desc">Нежная микропена и&nbsp;насыщенный кофейный характер</p>
+              <span class="card__price">260 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="coffee">
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=480&q=80&auto=format&fit=crop" alt="Флэт Уайт" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Флэт Уайт</h3>
+              <p class="card__desc">Двойной ристретто и шёлковое молоко — австралийская классика</p>
+              <span class="card__price">290 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="coffee">
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=480&q=80&auto=format&fit=crop" alt="Матча латте" loading="lazy" />
+              <span class="card__tag">Новинка</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Матча Латте</h3>
+              <p class="card__desc">Японский чай церемониального класса с&nbsp;паровым молоком</p>
+              <span class="card__price">320 ₽</span>
+            </div>
+          </article>
+
+          <!-- ЕДА -->
+          <article class="card" data-cat="food" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=480&q=80&auto=format&fit=crop" alt="Авокадо-тост" loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Авокадо-тост</h3>
+              <p class="card__desc">Ржаной хлеб, авокадо, яйцо пашот, редис, микрогрин</p>
+              <span class="card__price">420 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="food" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=480&q=80&auto=format&fit=crop" alt="Завтрак Зерно" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Завтрак «Зерно»</h3>
+              <p class="card__desc">Скрэмбл, фермерский бекон, тост, томаты черри, соус</p>
+              <span class="card__price">580 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="food" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=480&q=80&auto=format&fit=crop" alt="Боул с киноа" loading="lazy" />
+              <span class="card__tag">Веган</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Боул с киноа</h3>
+              <p class="card__desc">Киноа, нут, авокадо, огурец, шпинат, лимонная заправка</p>
+              <span class="card__price">520 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="food" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=480&q=80&auto=format&fit=crop" alt="Сэндвич с лососем" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Сэндвич с&nbsp;лососем</h3>
+              <p class="card__desc">Копчёный лосось, крем-сыр, огурец, каперсы, укроп</p>
+              <span class="card__price">490 ₽</span>
+            </div>
+          </article>
+
+      <article class="card" data-cat="food" hidden>
+  <div class="card__img-wrap">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=480&q=80&auto=format&fit=crop"
+         alt="Бизнес-ланч"
+         loading="lazy" />
+    <span class="card__tag">Новинка</span>
+  </div>
+
+  <div class="card__body">
+    <h3 class="card__name">Бизнес-ланч</h3>
+    <p class="card__desc">
+      Суп дня, горячее с гарниром, салат и напиток.
+    </p>
+    <span class="card__price">590 ₽</span>
+  </div>
+</article>
+
+     <article class="card" data-cat="grill" hidden>
+            <div class="card__img-wrap">
+              <img src="https://avatars.mds.yandex.net/get-sprav-products/3912342/2a0000019b21a9ec534da6438b277f66f409/orig" alt="Дорадо/Сибас" loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Дорадо/Сибас</h3>
+              <p class="card__desc">Дорадо или Сибас на гриле с лимоном рекомендуется с гранатовым соусом</p>
+              <span class="card__price">800 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="grill" hidden>
+            <div class="card__img-wrap">
+              <img src="https://avatars.mds.yandex.net/get-sprav-products/17712810/2a0000019b21e0db958de17b751b2e6685b1/orig" alt="Куриное филе " loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Куриное филе 300гр</h3>
+              <p class="card__desc">Нежное куриное филе подается с красным луком и зеленью. Рекомендуем с соусом тар-тар</p>
+              <span class="card__price">650 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="grill" hidden>
+            <div class="card__img-wrap">
+              <img src="https://avatars.mds.yandex.net/get-sprav-products/17712810/2a0000019b21db1379dcf1c7e6ad351b76f0/orig" alt="Куриные крылья " loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Куриные крылья 250гр</h3>
+              <p class="card__desc">Куриное крылышки на гриле с красным луком и зеленью. Рекомендуем с шашлычным соусом</p>
+              <span class="card__price">550 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="grill" hidden>
+            <div class="card__img-wrap">
+              <img src="https://avatars.mds.yandex.net/get-sprav-products/4079840/2a0000019b1cfaa784bbef28b2866b72e593/orig" alt="Баранина на кости " loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Баранина на кости 300гр</h3>
+              <p class="card__desc">Баранина на гриле с добавлением лука и зелени. Рекомендуем с шашлычным соусом</p>
+              <span class="card__price">1600 ₽</span>
+            </div>
+          </article>
+
+           <article class="card" data-cat="grill" hidden>
+            <div class="card__img-wrap">
+              <img src="https://avatars.mds.yandex.net/get-sprav-products/4079840/2a0000019b1cfaa784bbef28b2866b72e593/orig" alt="Шейка Свиная " loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Шейка Свиная 300гр</h3>
+              <p class="card__desc">Шейка свиная на гриле с доведением красного лука и зелени. Рекомендуем с домашний соусом Тар-Тар</p>
+              <span class="card__price">800 ₽</span>
+            </div>
+          </article>
+
+          <!-- ДЕСЕРТЫ -->
+          <article class="card" data-cat="desserts" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?w=480&q=80&auto=format&fit=crop" alt="Тирамису" loading="lazy" />
+              <span class="card__tag">Хит</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Тирамису</h3>
+              <p class="card__desc">Классический рецепт с маскарпоне и нашим эспрессо</p>
+              <span class="card__price">350 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="desserts" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=480&q=80&auto=format&fit=crop" alt="Морковный торт" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Морковный торт</h3>
+              <p class="card__desc">Влажный бисквит, крем из рикотты, грецкий орех, корица</p>
+              <span class="card__price">380 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="desserts" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1471943038886-c63b9d20c7f2?w=480&q=80&auto=format&fit=crop" alt="Круассан с миндалём" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Круассан с&nbsp;миндалём</h3>
+              <p class="card__desc">Слоёное тесто, миндальный крем, хлопья миндаля</p>
+              <span class="card__price">240 ₽</span>
+            </div>
+          </article>
+
+          <article class="card" data-cat="desserts" hidden>
+            <div class="card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1488477304112-4944851de03d?w=480&q=80&auto=format&fit=crop" alt="Чизкейк" loading="lazy" />
+              <span class="card__tag">Новинка</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Чизкейк Basque</h3>
+              <p class="card__desc">Баскский обожжённый чизкейк с ягодным соусом</p>
+              <span class="card__price">390 ₽</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ГАЛЕРЕЯ ===== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Атмосфера</span>
+          <h2 class="section-title">Загляните к&nbsp;нам</h2>
+        </div>
+        <div class="gallery__grid reveal">
+          <figure class="gal-item gal-item--tall">
+            <img src="/img/photo_9_2026-06-29_23-55-51.jpg" alt="Утро в кофейне" loading="lazy" />
+            <figcaption>Утреннее настроение</figcaption>
+          </figure>
+          <figure class="gal-item">
+            <img src="/img/photo_6_2026-06-29_23-55-51.jpg" alt="Уютный уголок" loading="lazy" />
+            <figcaption>Уютный уголок</figcaption>
+          </figure>
+          <figure class="gal-item">
+            <img src="/img/photo_3_2026-06-29_23-55-51.jpg" alt="Десерты" loading="lazy" />
+            <figcaption>Авторские десерты</figcaption>
+          </figure>
+          <figure class="gal-item gal-item--wide">
+            <img src="/img/photo_11_2026-06-29_23-55-51.jpg" alt="Интерьер кофейни" loading="lazy" />
+            <figcaption>Наш зал</figcaption>
+          </figure>
+          <figure class="gal-item">
+            <img src="/img/photo_8_2026-06-29_23-55-51.jpg" alt="Латте-арт" loading="lazy" />
+            <figcaption>Музыка</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ОТЗЫВЫ ===== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Слова гостей</span>
+          <h2 class="section-title">Отзывы</h2>
+        </div>
+
+        <div class="slider reveal" id="slider" aria-live="polite">
+          <div class="slider__track" id="sliderTrack">
+
+            <div class="review" role="group" aria-label="Отзыв 1 из 4">
+              <div class="review__stars" aria-label="5 звёзд">★★★★★</div>
+              <blockquote class="review__text">
+                Отличное место для отдыха с друзьями, &nbsp;все понравилось 🥰.
+              </blockquote>
+              <footer class="review__author">
+                <div class="review__avatar" aria-hidden="true">АС</div>
+                <div>
+                  <cite class="review__name">Ксения Большова</cite>
+                  <span class="review__source">Постоянный гость</span>
+                </div>
+              </footer>
+            </div>
+
+            <div class="review" role="group" aria-label="Отзыв 2 из 4">
+              <div class="review__stars" aria-label="5 звёзд">★★★★★</div>
+              <blockquote class="review__text">
+                Посетили с друзьями данное заведение, красивый интерьер, вежливый персонал. Меню электронное, но это не доставило неудобств, помогли разобраться. Кальяны вкусные и дымные, цена - качества. Меню неполное, так как тестовый режим, но все равно смогли выбрать что-то для себя. Придем еще!
+              </blockquote>
+              <footer class="review__author">
+                <div class="review__avatar" aria-hidden="true">МК</div>
+                <div>
+                  <cite class="review__name">Кристина Заворотная</cite>
+                  <span class="review__source">Яндекс Карты</span>
+                </div>
+              </footer>
+            </div>
+
+            <div class="review" role="group" aria-label="Отзыв 3 из 4">
+              <div class="review__stars" aria-label="5 звёзд">★★★★★</div>
+              <blockquote class="review__text">
+                Отличное место , красивый современный интерьер 👍🏼
+Отмечали день рождения ,все понравилось !
+Цены приемлемые , я бы не сказала что дорого ,
+Коктейли , салаты, шашлык вкусные .
+Кальян топ 👍🏼рекомендую
+              </blockquote>
+              <footer class="review__author">
+                <div class="review__avatar" aria-hidden="true">ЕВ</div>
+                <div>
+                  <cite class="review__name">Анжелика</cite>
+                  <span class="review__source">Постоянный Клиент</span>
+                </div>
+              </footer>
+            </div>
+
+            <div class="review" role="group" aria-label="Отзыв 4 из 4">
+              <div class="review__stars" aria-label="4 звезды">★★★★☆</div>
+              <blockquote class="review__text">
+                Хорошее завеление, НО уважаемое руководство, гардероб отвратительный. Отмечали корпотатив у вас 20.12. Народу масса, вешать верхнюю одежду не куда, всё из шкафов валится. Вешалки не выдерживают (очень тонкие пластиковые). Уберите шкафы, поставьте металлические вешалки. Или продумайте этот момент. Любое заведение начинается с вешалки. Очень рекомендую кафе. Нам с девочками очень понравилось. Спасибо вам за чудесный вечер, который вы нам организовали!
+              </blockquote>
+              <footer class="review__author">
+                <div class="review__avatar" aria-hidden="true">ДН</div>
+                <div>
+                  <cite class="review__name">Елена Балынская</cite>
+                  <span class="review__source">Яндекс Карты</span>
+                </div>
+              </footer>
+            </div>
+
+          </div>
+
+          <div class="slider__nav">
+            <button class="slider__btn" id="sliderPrev" aria-label="Предыдущий отзыв">&#8592;</button>
+            <div class="slider__dots" id="sliderDots"></div>
+            <button class="slider__btn" id="sliderNext" aria-label="Следующий отзыв">&#8594;</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ===== -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Будем рады видеть вас</span>
+          <h2 class="section-title">Контакты</h2>
+        </div>
+
+        <div class="contacts__grid">
+
+          <div class="contacts__info reveal">
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Адрес</strong>
+                <p>Нижний Новгород, Коммунистическая улица, 62</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Телефон</strong>
+                <p><a href="tel:+79503773303">+7 (950) 377-33-03</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@zerno.cafe">пока что нету</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">🕐</span>
+              <div>
+                <strong>Часы работы</strong>
+                <p>Пн–Чт: 12:00 – 02:00<br>Пт–Сб: 12:00 – 03:00<br>Вс: 12:00 – 02:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-container">
+    <h2>Забронировать столик</h2>
+    
+    <form action="book.php" method="POST" id="booking-form">
+        <div class="input-group">
+            <label for="phone">НАШ ТЕЛЕФОН *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (950) 377-33-03" required>
+        </div>
+
+        
+</div>
+
+<!-- Стили для формы и анимации кнопки -->
+<style>
+.booking-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 450px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.booking-container h2 {
+    color: #4a3b32;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #a39485;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e6dec9;
+    border-radius: 8px;
+    background-color: #fdfcf9;
+    font-size: 16px;
+    color: #4a3b32;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4a3b32;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(74, 59, 50, 0.1);
+}
+
+/* Стили кнопки */
+.anim-button {
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    background: #4a3b32;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.4s ease, transform 0.1s ease;
+    box-shadow: 0 4px 15px rgba(74, 59, 50, 0.2);
+}
+
+.anim-button:hover {
+    background: #382c25;
+}
+
+.anim-button:active {
+    transform: scale(0.98);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Эффект волны (Ripple) при клике */
+.btn-ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+</style>
+
+<!-- JavaScript для анимации клика (эффект волны) -->
+<script>
+document.getElementById('submit-btn').addEventListener('click', function(e) {
+    // Создаем элемент круга для эффекта волны
+    let ripple = document.createElement('span');
+    ripple.classList.add('btn-ripple');
+    this.appendChild(ripple);
+
+    // Получаем координаты клика относительно кнопки
+    let x = e.clientX - e.target.getBoundingClientRect().left;
+    let y = e.clientY - e.target.getBoundingClientRect().top;
+
+    // Задаем позицию и размеры круга
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.style.width = this.offsetWidth + 'px';
+    ripple.style.height = this.offsetWidth + 'px';
+    ripple.style.transform = 'translate(-50%, -50%) scale(0)';
+
+    // Удаляем элемент после завершения анимации
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+});
+</script>
+
+           
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="#hero" class="logo logo--light">Кафе Горький 48/25</a>
+          <p>Авторская кофейня в&nbsp;Нижнем Новгороде. Место, где начинается хорошее утро.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <strong>Навигация</strong>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <strong>Мы в соцсетях</strong>
+          <div class="social">
+            <a href="#" class="social__link" aria-label="ВКонтакте">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.131-.427.131-.427s-.019-1.304.583-1.496c.594-.189 1.358 1.261 2.168 1.817.612.416 1.076.325 1.076.325l2.161-.03s1.131-.07.595-.958c-.044-.073-.313-.659-1.612-1.863-1.359-1.258-1.176-1.054.46-3.229.999-1.333 1.398-2.146 1.273-2.494-.12-.332-.855-.244-.855-.244l-2.43.015s-.18-.025-.313.056c-.131.079-.215.262-.215.262s-.387 1.028-.903 1.903c-1.088 1.848-1.524 1.947-1.701 1.832-.414-.268-.311-1.075-.311-1.649 0-1.793.272-2.54-.529-2.733-.266-.064-.461-.107-1.141-.114-.872-.009-1.609.003-2.026.207-.278.136-.492.439-.361.456.161.021.526.098.72.361.25.341.241 1.107.241 1.107s.143 2.11-.334 2.372c-.327.177-.776-.184-1.739-1.834-.494-.855-.869-1.801-.869-1.801s-.072-.176-.201-.271c-.155-.115-.373-.151-.373-.151l-2.309.015s-.346.01-.473.160c-.112.134-.009.41-.009.41s1.807 4.23 3.856 6.362c1.879 1.955 4.011 1.827 4.011 1.827h.966z"/></svg>
+            </a>
+            <a href="#" class="social__link" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="#" class="social__link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 Кофейня «Кафе Горький 48/25». Все права защищены.</p>
+        <p>Сделано с ☕ в Нижнем Новгороде</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
